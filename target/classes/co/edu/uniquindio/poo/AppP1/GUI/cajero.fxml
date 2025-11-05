@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="co.edu.uniquindio.poo.AppP1.GUI.CajeroController"
+      alignment="CENTER" spacing="10" style="-fx-padding: 20;">
+    <Label text="Panel del Cajero"/>
+
+    <Label fx:id="nombreCajeroLabel" text="Nombre del Cajero" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+    <TextField fx:id="cuentaPrincipalField" promptText="cuentaUsuario"/>
+    <TextField fx:id="pinUsuarioField" promptText="pinUsuario"/>
+    <TextField fx:id="identificacionUsuarioField" promptText="idUsuario"/>
+    <Button text="Depositar Dinero" onAction="#mostrarVentanaDepositar" prefWidth="200" />
+    <Button text="Retirar Dinero" onAction="#mostrarVentanaRetirar" prefWidth="200" />
+    <Button text="Transferir Dinero" onAction="#mostrarVentanaTransferir" prefWidth="200" />
+    <Button text="Ver Reportes" onAction="#mostrarReportes" prefWidth="200" />
+    <Button text="Cambiar PIN" onAction="#cambiarPIN" prefWidth="200" />
+    <Button text="Cerrar Sesión" onAction="#cerrarSesion" prefWidth="200" style="-fx-background-color: #e74c3c; -fx-text-fill: white;" />
+</VBox>

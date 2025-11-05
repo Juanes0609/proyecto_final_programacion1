@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="co.edu.uniquindio.poo.AppP1.GUI.AdminController">
+
+    <top>
+        <Label text="Panel de Administración"
+               style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 15px; -fx-background-color: #2c3e50; -fx-text-fill: white;"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <VBox spacing="15" alignment="TOP_CENTER">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Label text="Gestión de Empleados" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+            <HBox spacing="10">
+                <VBox spacing="5">
+                    <Label text="Nombre:"/>
+                    <TextField fx:id="nombreField" promptText="Nombre del empleado"/>
+                </VBox>
+                <VBox spacing="5">
+                    <Label text="Identificación:"/>
+                    <TextField fx:id="idField" promptText="ID único"/>
+                </VBox>
+                <VBox spacing="5">
+                    <Label text="Dirección:"/>
+                    <TextField fx:id="direccionField" promptText="Dirección"/>
+                </VBox>
+            </HBox>
+
+            <HBox spacing="10">
+                <VBox spacing="5">
+                    <Label text="Teléfono:"/>
+                    <TextField fx:id="telefonoField" promptText="Número de contacto"/>
+                </VBox>
+                <VBox spacing="5">
+                    <Label text="Salario:"/>
+                    <TextField fx:id="salarioField" promptText="Ej: 2500000"/>
+                </VBox>
+                <VBox spacing="5">
+                    <Label text="PIN:"/>
+                    <PasswordField fx:id="pinField" promptText="PIN de acceso"/>
+                </VBox>
+            </HBox>
+
+            <HBox spacing="10">
+                <Button text="Registrar Empleado" onAction="#registrarEmpleado"/>
+                <Button text="Eliminar Seleccionado" onAction="#eliminarEmpleado"/>
+                <ComboBox fx:id="comboEmpleados" promptText="Selecciona un empleado" prefWidth="250"/>
+            </HBox>
+
+            <Separator/>
+
+            <Label text="Monitoreo de Transacciones" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+            <Button text="Mostrar Reporte de Transacciones" onAction="#mostrarTransacciones"/>
+
+            <TextArea fx:id="areaReportes" prefRowCount="10" wrapText="true"/>
+            
+            <Button text="Cerrar Sesión" onAction="#cerrarSesion"/>
+
+        </VBox>
+    </center>
+</BorderPane>
